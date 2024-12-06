@@ -15,12 +15,12 @@ async function receiveImage(id) {
       object.querySelector(".category-name").addEventListener("click", () => {
         window.location.href = `/division/${id}`;
       });
-      champ.querySelector("h4").addEventListener("click", () => {
-        window.location.href = `/fighter/${id}`;
-      });
-      champ.querySelector("img").addEventListener("click", () => {
-        window.location.href = `/fighter/${id}`;
-      });
+      // champ.querySelector("h4").addEventListener("click", () => {
+      //   window.location.href = `/fighter/${id}`; 
+      // });
+      // champ.querySelector("img").addEventListener("click", () => {
+      //   window.location.href = `/fighter/${id}`;
+      // });
     });
 
     let champ = document.querySelectorAll(".champ");
@@ -38,12 +38,12 @@ async function receiveImage(id) {
   if (divItem) {
     let itemId = divItem.getAttribute("data-id");
 
-    divItem.querySelector("h4").addEventListener("click", () => {
-      window.location.href = `/fighter/${itemId}`;
-    });
-    divItem.querySelector("img").addEventListener("click", () => {
-      window.location.href = `/fighter/${itemId}`;
-    });
+    // divItem.querySelector("h4").addEventListener("click", () => {
+    //   window.location.href = `/fighter/${itemId}`;
+    // });
+    // divItem.querySelector("img").addEventListener("click", () => {
+    //   window.location.href = `/fighter/${itemId}`;
+    // });
     let imgUrl = await receiveImage(itemId);
     divItem.querySelector("img").setAttribute("src", imgUrl);
   }
@@ -54,9 +54,9 @@ async function receiveImage(id) {
   idArray.forEach(async (id) => {
     let image = id.querySelector("img");
     let itemId = image.getAttribute("data-id");
-    image.addEventListener("click", () => {
-      window.location.href = `/fighter/${itemId}`;
-    });
+    // image.addEventListener("click", () => {
+    //   window.location.href = `/fighter/${itemId}`;
+    // });
     let imageUrl = await receiveImage(itemId);
     image.setAttribute("src", imageUrl);
   });
@@ -71,12 +71,12 @@ async function receiveImage(id) {
     });
     let champDiv = category.querySelector(".champ-division-list");
     let champId = champDiv.getAttribute("data-id");
-    champDiv.querySelector(".champ-title").addEventListener("click", () => {
-      window.location.href = `/fighter/${champId}`;
-    });
-    champDiv.querySelector("img").addEventListener("click", () => {
-      window.location.href = `/fighter/${champId}`;
-    });
+    // champDiv.querySelector(".champ-title").addEventListener("click", () => {
+    //   window.location.href = `/fighter/${champId}`;
+    // });
+    // champDiv.querySelector("img").addEventListener("click", () => {
+    //   window.location.href = `/fighter/${champId}`;
+    // });
     let imageUrl = await receiveImage(champId);
     champDiv.querySelector("img").setAttribute("src", imageUrl);
   });

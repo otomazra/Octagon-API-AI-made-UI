@@ -3,10 +3,10 @@
 <div class="category-division">
   <h1><%= data.categoryName%></h1>
   <div class="champ-division" data-id="<%= data.champion.id %>">
-    <h4 data-id="<%= data.champion.id %>">
-      Champion: <span class="division-champion-name"><%= data.champion.championName %></span>
+    <h4 data-id="<%= data.champion.id %>"><a href="/fighter/<%= data.champion.id %>">
+      Champion: <span class="division-champion-name"><%= data.champion.championName %></span></a>
     </h4>
-    <img class="champImage-division" data-id="<%= data.champion.id %>" src="" alt="" />
+    <a href="/fighter/<%= data.champion.id %>"><img class="champImage-division" data-id="<%= data.champion.id %>" src="" alt="" /></a>
   </div>
   <ol>
     <% data.fighters.forEach(fighter=>{ %>
@@ -14,7 +14,7 @@
       <li class="fighter-division">
         <div class="fighter-info">
         <a href="/fighter/<%= fighter.id %>"><span><%=fighter.name%></span></a>
-        <img data-id="<%= fighter.id %>" class="champImage-division" src="" alt="">
+        <a href="/fighter/<%= fighter.id %>"><img data-id="<%= fighter.id %>" class="champImage-division" src="" alt=""></a>
         </div>
       </li>
     </div>

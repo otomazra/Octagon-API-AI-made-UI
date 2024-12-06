@@ -6,8 +6,8 @@
             <div data-id="<%=item.id%>" class="category">
                 <h3 class="category-name"><%= item.categoryName%></h3>
                 <div class="champ" data-id="<%= item.champion.id %>">
-                    <h4 data-id="<%= item.champion.id %>">Champion: <span><%= item.champion.championName %></span></h4>
-                    <img class="champImage" data-id="<%= item.champion.id %>" src="" alt="">
+                    <h4 data-id="<%= item.champion.id %>"><a href="/fighter/<%= item.champion.id %>">Champion: <span><%= item.champion.championName %></span></a></h4>
+                    <a href="/fighter/<%= item.champion.id %>"><img class="champImage" data-id="<%= item.champion.id %>" src="" alt=""></a>
                 </div>
                 <ol>
                     <% item.fighters.forEach(fighter=>{ %>
