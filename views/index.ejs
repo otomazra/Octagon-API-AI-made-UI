@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs"); %>
+    <section>
+        <h1 class="divisions-title">Divisions</h1>
+        <% data.forEach(item=>{ %>
+            <div data-id="<%= item.id%>" class="category-division-list">
+                <h3 class="division-title"><%= item.categoryName%></h3>
+                <div class="champ-division-list" data-id="<%= item.champion.id %>">
+                    <h4 class="champ-title" data-id="<%= item.champion.id %>">Champion: <span class="championName"><%= item.champion.championName %></span></h4>
+                    <img class="champImage-division-list" data-id="<%= item.champion.id %>" src="" alt="">
+                </div>
+            </div>
+        <% }) %>
+    </section>
+
+<%- include("partials/footer.ejs") %>

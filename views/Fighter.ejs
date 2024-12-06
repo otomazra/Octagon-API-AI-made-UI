@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs"); %>
+<div>
+  <h1 class="title"><%= fighter.name %></h1>
+  <div id="info-and-img">
+    <div class="img-div">
+      <img src="<%= fighter.imgUrl %>" alt="<%= fighter.id %>-img" />
+    </div>
+    <div class="data">
+      <p class="nickName">Nickname: <%= fighter.nickname || "No nickname" %></p>
+      <p>Weight category: <%= fighter.category %></p>
+      <p class="status">Status: <%= fighter.status %></p>
+      <p>Place of Birth:<%=fighter.placeOfBirth %></p>
+      <p>Trains at: <%= fighter.trainsAt %></p>
+      <p>Age: <%= fighter.age %></p>
+      <p>Height: <%= fighter.height %></p>
+      <p>Weight: <%= fighter.weight %></p>
+      <p>Octagon debut: <%= fighter.octagonDebut %></p>
+      <p>Reach: <%= fighter.reach %></p>
+      <p>Leg reach: <%= fighter.legReach%></p>
+    </div>
+  </div>
+  <p class="result">Wins <span class="wins"><%= fighter.wins %></span></p>
+  <p class="result">Losses <span class="losses"><%= fighter.losses%></span></p>
+  <p class="result">Draws <span class="draws"><%=fighter.draws%></span></p>
+</div>
+<%- include("partials/footer.ejs") %>

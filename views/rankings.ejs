@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+    <div class="rankings"> 
+        <h1 class="rankings-title">Rankings</h1>
+        <div id="category-container">
+        <% data.forEach(item=>{ %>
+            <div data-id="<%=item.id%>" class="category">
+                <h3 class="category-name"><%= item.categoryName%></h3>
+                <div class="champ" data-id="<%= item.champion.id %>">
+                    <h4 data-id="<%= item.champion.id %>">Champion: <span><%= item.champion.championName %></span></h4>
+                    <img class="champImage" data-id="<%= item.champion.id %>" src="" alt="">
+                </div>
+                <ol>
+                    <% item.fighters.forEach(fighter=>{ %>
+                        <li class="fighter"><a href="/fighter/<%= fighter.id %>"><%=fighter.name%></a></li>
+                   <% }) %>
+                </ol>
+            </div>
+        <% }) %>
+    </div>
+    <!-- <script src="/script.js"></script> -->
+
+    <%- include("partials/footer.ejs") %>

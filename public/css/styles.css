@@ -1,0 +1,313 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1e; /* Dark background for a bold MMA feel */
+    color: #f1f1f1; /* Light text for contrast */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+
+
+/* Header */
+header#header {
+    width: 100%;
+    background-color: #282828;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid #d93b3b;
+}
+
+.logo {
+    font-size: 1.5rem !important;
+}
+
+.octagon {
+    color: red;
+}
+
+.api{
+    color: white;
+}
+
+header#header div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header#header .logo {
+    size: 1.5rem;
+    /* background-color: crimson; */
+}
+
+
+header#header a {
+    text-decoration: none;
+    color: #d93b3b;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+header#header a:hover {
+    color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #282828;
+    color: #d93b3b;
+    border-top: 2px solid #d93b3b;
+    font-size: 1rem;
+}
+
+/* Main Content */
+h1.title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #d93b3b;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Rankings & Divisions */
+.category, .category-division {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 900px;
+}
+
+.category-division-list {
+    margin-bottom: 100px;
+}
+
+.category h3, .category-division h1, .division-title{
+    text-transform: uppercase;
+    color: #ff0000;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #d93b3b;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.champ-title {
+    /* text-transform: uppercase; */
+    color: #ff0000;
+    font-size: 1.8rem;
+    /* border-bottom: 2px solid #d93b3b; */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.champImage-division-list:hover{
+    cursor: pointer;
+    color: #f1f1f1;
+    transition: color 0.3s ease-in-out;
+}
+
+.champImage-division-list {
+    max-width: 300px !important;
+}
+
+.division-title:hover {
+    cursor: pointer;
+    color: #f1f1f1;
+    transition: color 0.3s ease-in-out;
+}
+
+.championName:hover {
+    cursor: pointer;
+    color: #f1f1f1;
+    transition: color 0.3s ease-in-out;
+}
+
+.champ, .champ-division {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.champ h4, .champ-division h4 {
+    font-size: 1.2rem;
+    color: #d93b3b;
+}
+
+img {
+    border-radius: 8px;
+    max-width: 100px;
+    height: auto;
+}
+
+.rankings-title {
+    text-align: center;
+}
+
+.division-champion-name:hover {
+    cursor: pointer;
+    color: #f1f1f1;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Fighters */
+
+
+
+.fighter, .fighter-division {
+    list-style: decimal;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+.fighter-info {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.fighter-division img {
+    cursor: pointer;
+    border: solid gold 2px;
+    background: blue;
+}
+
+.champImage-division, .champImage {
+    background: gold;
+    border: red 2px solid;
+    cursor: pointer;
+}
+
+.champ-division h4{
+    cursor: pointer;
+}
+
+.champ h4 {
+    cursor: pointer
+}
+
+.category-name:hover {
+    cursor: pointer;
+    color: #f1f1f1;
+    transition: color 0.3s ease-in-out;
+}
+
+.champ h4 span:hover{
+    color: #f1f1f1;
+    transition: color 0.3s ease-in-out;
+}
+
+.fighter a, .fighter-division a {
+    text-decoration: none;
+    color: #d93b3b;
+    transition: color 0.3s ease-in-out;
+}
+
+.fighter a:hover, .fighter-division a:hover {
+    color: #f1f1f1;
+}
+
+/* Fighter Details */
+.fighter-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 900px;
+}
+
+.fighter-details img {
+    flex: 1;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+.fighter-data {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fighter-data p {
+    font-size: 1.2rem;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #f1f1f1;
+}
+
+.result .wins {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.result .losses {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.result .draws {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+
+/* Utility Classes */
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .champ, .champ-division, .fighter-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    img {
+        max-width: 150px;
+    }
+
+    .fighter-data {
+        align-items: center;
+    }
+}
