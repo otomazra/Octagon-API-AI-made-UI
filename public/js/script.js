@@ -2,17 +2,12 @@ async function receiveImage(id) {
   let link = "/img/" + id;
   const response = await fetch(link);
   const data = await response.json();
-//   console.log(data.imgUrl);
   return data.imgUrl;
 }
-
-// (async ()=>{console.log( await receiveImage("islam-makhachev"));})();
 
 (async () => {
   let divObject = document.querySelectorAll(".category");
   if (divObject.length > 0) {
-    //   let id = divObject[0].getAttribute("data-id");
-    //   console.log(id);
 
     divObject.forEach((object) => {
       let champ = object.querySelector(".champ");
@@ -32,7 +27,6 @@ async function receiveImage(id) {
 
     champ.forEach(async (object) => {
       let id = object.getAttribute("data-id");
-    //   console.log(id);
       let imageUrl = await receiveImage(id);
       object.querySelector(".champImage").setAttribute("src", imageUrl);
     });
@@ -42,7 +36,6 @@ async function receiveImage(id) {
 (async () => {
   let divItem = document.querySelector(".champ-division");
   if (divItem) {
-    //   console.log(divItem);
     let itemId = divItem.getAttribute("data-id");
 
     divItem.querySelector("h4").addEventListener("click", () => {
@@ -52,33 +45,27 @@ async function receiveImage(id) {
       window.location.href = "/fighter/" + itemId;
     });
     let imgUrl = await receiveImage(itemId);
-    // console.log(imgUrl);
     divItem.querySelector("img").setAttribute("src", imgUrl);
   }
 })();
 
 (async () => {
   let idArray = document.querySelectorAll(".fighter-division");
-//   console.log(idArray);
   idArray.forEach(async (id) => {
     let image = id.querySelector("img");
     let itemId = image.getAttribute("data-id");
     image.addEventListener("click", () => {
       window.location.href = "/fighter/" + itemId;
     });
-    // console.log(itemId);
     let imageUrl = await receiveImage(itemId);
-    // console.log(imageUrl);
     image.setAttribute("src", imageUrl);
   });
 })();
 
 (async () => {
   let categoryArray = document.querySelectorAll(".category-division-list");
-//   console.log(categoryArray);
   categoryArray.forEach(async (category) => {
     let id = category.getAttribute("data-id");
-    // console.log(id);
     category.querySelector(".division-title").addEventListener("click", () => {
       window.location.href = `/division/${id}`;
     });
