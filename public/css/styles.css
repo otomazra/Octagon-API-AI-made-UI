@@ -18,7 +18,10 @@ body {
     padding: 0 20px;
 }
 
-
+a {
+    text-decoration: none;
+    color: #d93b3b;
+}
 
 /* Header */
 header#header {
